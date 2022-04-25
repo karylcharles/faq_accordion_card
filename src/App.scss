@@ -1,0 +1,17 @@
+@import "./index.scss";
+
+.App {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, $soft-violet, $soft-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 376px){
+  .App{
+    height: 100%;
+    padding: 150px 0;
+  }
+}

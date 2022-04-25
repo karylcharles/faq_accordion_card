@@ -1,0 +1,54 @@
+@import "./index.scss";
+
+.Accordion {
+  &-container {
+    padding-bottom: 2rem;
+    border-bottom: 1.5px solid $light-grayish-blue;
+  }
+
+  &-container:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &__questions-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    & p {
+      font-size: 1.4rem;
+      color: $very-dark-grayish-blue;
+    }
+
+    & button {
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+
+    &.active {
+      & p {
+        font-weight: 700;
+        color: $very-dark-desaturated-blue;
+      }
+
+      & button {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &-title__sub {
+    display: block;
+    margin-top: 10px;
+    color: $dark-grayish-blue;
+    padding-right: 10px;
+    transition: all 0.5s;
+
+    &.hidden {
+      opacity: 0;
+      display: none;
+    }
+  }
+}

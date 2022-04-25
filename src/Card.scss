@@ -1,0 +1,97 @@
+@import "./index.scss";
+
+.Card {
+  width: 900px;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  box-shadow: 0 2px 20px $very-dark-desaturated-blue;
+
+  &-box {
+    width: 23%;
+    position: absolute;
+    top: 10%;
+    left: 0.4%;
+    transform: translate(-50%, 75%);
+    z-index: 10;
+  }
+
+  &-imgContainer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    &__bg-pattern {
+      width: 210%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-56%, -30%);
+    }
+
+    &__bg-woman {
+      width: 110%;
+      z-index: 5;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-17%, 16%);
+    }
+  }
+
+  &-faq {
+    padding: 5rem 8rem 5rem 5rem;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+
+    &__title {
+      font-size: 3rem;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .Card {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    &-imgContainer {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      overflow: visible;
+      top: -4.5%;
+      left: 60%;
+      transform: translate(-50%, -50%);
+
+      &__bg-pattern{
+        width: 220px;
+        height: 220px;
+        top: 30%;
+        left: 42.5%;
+      }
+    }
+
+    &-box{
+      width: 25%;
+      top: -14%;
+      left: 26%;
+    }
+
+    grid-template-columns: 1fr;
+
+    &-faq {
+      margin-top: 5.5rem;
+      width: 100%;
+      padding: 5rem 1.5rem;
+      &__title {
+        text-align: center;
+      }
+    }
+  }
+}
